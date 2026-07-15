@@ -9,8 +9,8 @@ export const App = () => {
   const [filter, setFilter] = useState("active");
   const [filterText, setFilterText] = useState("Завершенные");
 
-  const API_URL = "http://localhost:4000/api/tasks";
-  const API_KEY = "my-secret-key";
+  const API_URL = import.meta.env.API_URL;
+  const API_KEY = import.meta.env.API_KEY;
 
   useEffect(() => {
     fetch(API_URL, { headers: { "x-api-key": API_KEY } })
