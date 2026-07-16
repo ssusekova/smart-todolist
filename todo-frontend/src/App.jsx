@@ -9,8 +9,8 @@ export const App = () => {
   const [filter, setFilter] = useState("active");
   const [filterText, setFilterText] = useState("Завершенные");
 
-  const API_URL = import.meta.env.API_URL;
-  const API_KEY = import.meta.env.API_KEY;
+  const API_URL = import.meta.env.VITE_API_URL;
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     fetch(API_URL, { headers: { "x-api-key": API_KEY } })
