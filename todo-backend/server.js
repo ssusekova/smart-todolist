@@ -7,8 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 4000;
-const API_KEY = process.env.API_KEY || "my-secret-key";
+const API_KEY = process.env.API_KEY;
 
 const checkApiKey = (req, res, next) => {
   const apiKey = req.headers["x-api-key"];
